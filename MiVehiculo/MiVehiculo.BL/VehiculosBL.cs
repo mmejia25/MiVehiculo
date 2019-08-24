@@ -8,5 +8,6 @@ namespace MiVehiculo.BL
 {
     public class VehiculosBL
     {
+
     }
 }
