@@ -20,7 +20,7 @@ namespace MiVehiculo.BL
             modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
         }
 
-       // public DbSet<Marca> Marcas { get; set; }
+        public DbSet<Marca> Marcas { get; set; }
         //public DbSet<Modelo> Modelos { get; set; }
         public DbSet<Vehiculo> Vehiculos { get; set; }
     }

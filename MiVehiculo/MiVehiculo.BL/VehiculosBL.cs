@@ -18,8 +18,45 @@ namespace MiVehiculo.BL
 
         public List<Vehiculo> Obtener()
         {
+            ListadeVehiculos = _contexto.Vehiculos
+                .Include("Marca")
+                 .ToList();
+                
+            return ListadeVehiculos;
+        }
+        public void GuardarVehiculo(Vehiculo vehiculo)
+        {
+            if(vehiculo.Id == 0)
+            {
+                _contexto.Vehiculos.Add(vehiculo);
+                
+            }else
+            {
+                var vehiculoexistente = _contexto.Vehiculos.Find(vehiculo.Id);
+                vehiculoexistente.Marca = vehiculo.Marca;
+                vehiculoexistente.MarcaId = vehiculo.MarcaId;
+                vehiculoexistente.Placa = vehiculo.Placa;
+                vehiculoexistente.Modelo = vehiculo.Modelo;
+                vehiculoexistente.Año = vehiculo.Año;
+            }
 
-           return _contexto.Vehiculos.ToList();
+        
+            _contexto.SaveChanges();
+
+        }
+
+        public Vehiculo Obtener(int Id)
+        {
+            var vehiculo = _contexto.Vehiculos.Find(Id);
+            return vehiculo;
+        }
+
+        public void EliminarVehiculo(int Id)
+        {
+            var vehiculo = _contexto.Vehiculos.Find(Id);
+
+            _contexto.Vehiculos.Remove(vehiculo);
+            _contexto.SaveChanges();
         }
     }
 }

@@ -1,0 +1,65 @@
+﻿@model IEnumerable<MiVehiculo.BL.Vehiculo>
+
+@{
+    ViewBag.Title = "Vehiculo";
+}
+
+<h2>Vehiculo</h2>
+
+<p>
+    @Html.ActionLink("Crear Vehiculo", "Crear")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.MarcaId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Modelo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Placa)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Año)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Color)
+        </th>
+
+        <th>
+            @Html.DisplayNameFor(model => model.Estatus)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Marca.Descripcion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Modelo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Placa)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Año)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Color)
+        </td>
+      
+        <td>
+            @Html.DisplayFor(modelItem => item.Estatus)
+        </td>
+        <td>
+            @Html.ActionLink("Editar", "Editar", new { id = item.Id }) |
+            @Html.ActionLink("Detalle", "Detalle", new { id = item.Id }) |
+            @Html.ActionLink("Eliminar", "Eliminar", new { id = item.Id })
+        </td>
+    </tr>
+}
+
+</table>
