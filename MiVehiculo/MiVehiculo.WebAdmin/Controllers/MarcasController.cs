@@ -38,8 +38,20 @@ namespace MiVehiculo.WebAdmin.Controllers
         public ActionResult Crear(Marca marca)
         {
 
-            _marcasBL.GuardarMarca(marca);
-            return RedirectToAction("Index");
+            if (ModelState.IsValid)
+            {
+                if (marca.Descripcion != marca.Descripcion.Trim())
+                {
+                    ModelState.AddModelError("Descripcion","La Marca No debe Contener Espacios al Inicio o Al Final");
+                    return View(marca);
+                }
+
+                _marcasBL.GuardarMarca(marca);
+                return RedirectToAction("Index");
+            }
+
+            return View(marca);
+           
         }
 
         public ActionResult Editar(int Id)
@@ -51,8 +63,21 @@ namespace MiVehiculo.WebAdmin.Controllers
         [HttpPost]
         public ActionResult Editar(Marca marca)
         {
-            _marcasBL.GuardarMarca(marca);
-            return RedirectToAction("Index");
+
+            if (ModelState.IsValid)
+            {
+                if (marca.Descripcion != marca.Descripcion.Trim())
+                {
+                    ModelState.AddModelError("Descripcion", "La Marca No debe Contener Espacios al Inicio o Al Final");
+                    return View(marca);
+                }
+
+                _marcasBL.GuardarMarca(marca);
+                return RedirectToAction("Index");
+            }
+
+            return View(marca);
+
         }
 
         public ActionResult Detalle(int Id)

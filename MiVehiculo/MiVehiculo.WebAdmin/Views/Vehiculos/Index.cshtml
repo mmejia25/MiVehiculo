@@ -12,7 +12,7 @@
 <table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.MarcaId)
+            @Html.DisplayNameFor(model => model.Marca)
         </th>
         <th>
             @Html.DisplayNameFor(model => model.Modelo)
@@ -26,7 +26,9 @@
         <th>
             @Html.DisplayNameFor(model => model.Color)
         </th>
-
+        <th>
+            @Html.DisplayNameFor(model => model.UrlImagen)
+        </th>
         <th>
             @Html.DisplayNameFor(model => model.Estatus)
         </th>
@@ -50,7 +52,9 @@
         <td>
             @Html.DisplayFor(modelItem => item.Color)
         </td>
-      
+        <td>
+            <img src="@item.UrlImagen" alt="@item.Marca.Descripcion" style="max-width:64px; height:auto;" />
+        </td>
         <td>
             @Html.DisplayFor(modelItem => item.Estatus)
         </td>

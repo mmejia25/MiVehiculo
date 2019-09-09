@@ -33,23 +33,45 @@ namespace MiVehiculo.WebAdmin.Controllers
             var NuevoVehiculo = new Vehiculo();
             var marcas = _marcaBL.Obtener();
 
-            ViewBag.ListaMarcas = new SelectList(marcas, "Id", "Descripcion");
+            ViewBag.MarcaId = new SelectList(marcas, "Id", "Descripcion");
             return View(NuevoVehiculo);
         }
 
-       
+
         [HttpPost]
-        public ActionResult Crear(Vehiculo vehiculo)
+        public ActionResult Crear(Vehiculo vehiculo, HttpPostedFileBase imagen)
         {
 
-            _vehiculosBL.GuardarVehiculo(vehiculo);
+            if (ModelState.IsValid)
+            {
 
+                if (vehiculo.MarcaId == 0)
+                {
+                    ModelState.AddModelError("MarcaId", "Seleccione una Marca");
+                    return View(vehiculo);
 
-            return RedirectToAction("Index");
+                }
 
+                if (imagen != null)
+                {
+                    vehiculo.UrlImagen = GuardarImagen(imagen);
+                }
+
+                _vehiculosBL.GuardarVehiculo(vehiculo);
+
+                return RedirectToAction("Index");
+
+            }
+
+            var NuevoVehiculo = new Vehiculo();
+            var marcas = _marcaBL.Obtener();
+
+            ViewBag.MarcaId = new SelectList(marcas, "Id", "Descripcion");
+            return View(NuevoVehiculo);
         }
 
         public ActionResult Editar(int Id)
+
         {
            var vehiculos = _vehiculosBL.Obtener(Id);
             var marcas = _marcaBL.Obtener();
@@ -60,8 +82,29 @@ namespace MiVehiculo.WebAdmin.Controllers
         } 
         
         [HttpPost]
-        public ActionResult Editar(Vehiculo vehiculo)
+        public ActionResult Editar(Vehiculo vehiculo, HttpPostedFileBase imagen)
         {
+            if (ModelState.IsValid)
+            {
+
+                if (vehiculo.MarcaId == 0)
+                {
+                    ModelState.AddModelError("MarcaId", "Seleccione una Marca");
+                    return View(vehiculo);
+
+                }
+
+                if (imagen != null)
+                {
+                    vehiculo.UrlImagen = GuardarImagen(imagen);
+                }
+
+                _vehiculosBL.GuardarVehiculo(vehiculo);
+
+                return RedirectToAction("Index");
+
+            }
+
             _vehiculosBL.GuardarVehiculo(vehiculo);
             return RedirectToAction("Index");
         }
@@ -85,6 +128,14 @@ namespace MiVehiculo.WebAdmin.Controllers
         {
             _vehiculosBL.EliminarVehiculo(vehiculo.Id);
             return RedirectToAction("Index");
+        }
+
+        private string GuardarImagen(HttpPostedFileBase imagen)
+        {
+            string path = Server.MapPath("~/Imagenes/" + imagen.FileName);
+            imagen.SaveAs(path);
+
+            return "/Imagenes/" + imagen.FileName;
         }
     }
 }

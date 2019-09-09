@@ -38,6 +38,7 @@ namespace MiVehiculo.BL
                 vehiculoexistente.Placa = vehiculo.Placa;
                 vehiculoexistente.Modelo = vehiculo.Modelo;
                 vehiculoexistente.Año = vehiculo.Año;
+                vehiculoexistente.UrlImagen = vehiculo.UrlImagen;
             }
 
         
