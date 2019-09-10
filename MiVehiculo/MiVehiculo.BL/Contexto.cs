@@ -21,7 +21,11 @@ namespace MiVehiculo.BL
         }
 
         public DbSet<Marca> Marcas { get; set; }
-        //public DbSet<Modelo> Modelos { get; set; }
         public DbSet<Vehiculo> Vehiculos { get; set; }
+        public DbSet<Producto> Productos { get; set; }
+        public DbSet<Categoria> Categorias { get; set; }
+        public DbSet<Cliente> Clientes { get; set; }
+        public DbSet<Orden>Ordenes { get; set; }
+        public DbSet<OrdenDetalle> OrdenDetalle { get; set; }
     }
 }
