@@ -21,7 +21,6 @@ namespace MiVehiculo.WebAdmin.Controllers
         public ActionResult Index()
         {
             var listadeCategorias = _categoriasBL.ObtenerCategorias();
-
             return View(listadeCategorias);
         }
 

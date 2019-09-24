@@ -20,6 +20,8 @@ namespace MiVehiculo.BL
         {
             ListadeVehiculos = _contexto.Vehiculos
                 .Include("Marca")
+                .OrderBy(v => v.Marca.Descripcion)
+                .ThenBy(v => v.Marca.Descripcion)   
                  .ToList();
                 
             return ListadeVehiculos;
@@ -40,8 +42,8 @@ namespace MiVehiculo.BL
                 vehiculoexistente.Año = vehiculo.Año;
                 vehiculoexistente.UrlImagen = vehiculo.UrlImagen;
             }
-
-        
+            
+            
             _contexto.SaveChanges();
 
         }

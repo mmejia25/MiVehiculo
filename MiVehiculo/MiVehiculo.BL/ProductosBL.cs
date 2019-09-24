@@ -49,7 +49,6 @@ namespace MiVehiculo.BL
             else
             {
                 var productoExistente = _contexto.Productos.Find(producto.Id);
-
                 productoExistente.Descripcion = producto.Descripcion;
                 productoExistente.CategoriaId = producto.CategoriaId;
                 productoExistente.Precio = producto.Precio;
@@ -67,9 +66,9 @@ namespace MiVehiculo.BL
             return producto;
         }
 
-        public void EliminarProducto(int id)
+        public void EliminarProducto(int Id)
         {
-            var producto = _contexto.Productos.Find(id);
+            var producto = _contexto.Productos.Find(Id);
 
             _contexto.Productos.Remove(producto);
             _contexto.SaveChanges();
