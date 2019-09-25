@@ -19,11 +19,11 @@ namespace MiVehiculo.Web.Controllers
         {
 
             var productosBL = new ProductosBL();
-            var listadeproductos = productosBL.ObtenerProductos();
+            var listadeproductos = productosBL.ObtenerProductosActivos();
 
-            ViewBag.adminwebSiteUrl = ConfigurationManager.AppSettings[];
+          ViewBag.adminwebSiteUrl = ConfigurationManager.AppSettings["adminwebSiteUrl"];
 
-            return View();
+            return View(listadeproductos);
 
         }
     }
