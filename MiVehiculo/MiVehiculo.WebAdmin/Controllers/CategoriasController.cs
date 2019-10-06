@@ -7,9 +7,10 @@ using MiVehiculo.BL;
 
 namespace MiVehiculo.WebAdmin.Controllers
 {
+    [Authorize]
     public class CategoriasController : Controller
     {
-
+        
         CategoriasBL _categoriasBL;
 
         public CategoriasController()

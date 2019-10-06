@@ -7,6 +7,7 @@ using System.Web.Mvc;
 
 namespace MiVehiculo.WebAdmin.Controllers
 {
+    [Authorize]
     public class OrdenesDetalleController : Controller
     {
         OrdenesBL _ordenBL;

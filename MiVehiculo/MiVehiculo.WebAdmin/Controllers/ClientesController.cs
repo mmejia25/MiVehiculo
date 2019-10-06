@@ -7,6 +7,7 @@ using MiVehiculo.BL;
 
 namespace MiVehiculo.WebAdmin.Controllers
 {
+    [Authorize]
     public class ClientesController : Controller
     {
         ClientesBL _clientesBL;

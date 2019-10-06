@@ -122,6 +122,8 @@
     <Content Include="images\icons.png" />
     <Content Include="images\Logo-Vehiculo.png" />
     <Content Include="images\logo-white.png" />
+    <Content Include="images\mant.jpg" />
+    <Content Include="images\Mant2.jpg" />
     <Content Include="images\menu-1-120x120.jpg" />
     <Content Include="images\menu-2-120x120.jpg" />
     <Content Include="images\menu-3-120x120.jpg" />

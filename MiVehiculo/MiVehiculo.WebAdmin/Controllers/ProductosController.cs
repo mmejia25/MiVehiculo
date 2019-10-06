@@ -8,6 +8,7 @@ using MiVehiculo.BL;
 
 namespace MiVehiculo.WebAdmin.Controllers
 {
+    [Authorize]
     public class ProductosController : Controller
     {
 
