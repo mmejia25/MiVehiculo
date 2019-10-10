@@ -99,6 +99,7 @@
     <Content Include="assets\css\custom.css" />
     <Content Include="assets\css\font-awesome.min.css" />
     <Content Include="assets\css\material-design.css" />
+    <Content Include="assets\css\NewHoja1.css" />
     <Content Include="assets\css\roboto.css" />
     <Content Include="assets\css\small-n-flat.css" />
     <Content Include="assets\css\summernote.css" />
@@ -107,6 +108,7 @@
     <Content Include="assets\img\camaro.jpg" />
     <Content Include="assets\img\components.png" />
     <Content Include="assets\img\devices.png" />
+    <Content Include="assets\js\JsWebSitio.js" />
     <Content Include="assets\img\logo-big.svg" />
     <Content Include="assets\img\logo.svg" />
     <Content Include="assets\img\md\dark\3d-rotation.svg" />
@@ -1868,7 +1870,10 @@
     <Content Include="Imagenes\1.jpg" />
     <Content Include="Imagenes\Corolla.jpg" />
     <Content Include="Imagenes\Corolla20016.jpg" />
+    <Content Include="Imagenes\Cremacion.jpg" />
+    <Content Include="Imagenes\descarga.jpg" />
     <Content Include="Imagenes\Empaque.jpg" />
+    <Content Include="Imagenes\funeraria.png" />
     <Content Include="Imagenes\mant.jpg" />
     <Content Include="Imagenes\Motul10W30.png" />
     <Content Include="Imagenes\Prado.jpg" />

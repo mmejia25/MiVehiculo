@@ -147,7 +147,7 @@ header:after {
         bottom: -10px;
         left: 0;
         right: 0;
-        background: url(../images/triangle_bg_black.png) repeat-x;
+        background: url(../~/images/triangle_bg_black.png) repeat-x;
         background-size: 26px 10px;
         opacity: .6;
 }
@@ -378,7 +378,7 @@ header .main-menu li.drop-down a.mouseover + ul.drop-down-menu {
         top: 0px;
         left: 0;
         right: 0;
-        background: url(../images/triangle_bg.png) repeat-x;
+        background: url(../~/images/triangle_bg.png) repeat-x;
         background-size: 26px 10px;
         transform: rotate(180deg); -webkit-transform: rotate(180deg);
 }
@@ -390,7 +390,7 @@ header .main-menu li.drop-down a.mouseover + ul.drop-down-menu {
         bottom: 0px;
         left: 0;
         right: 0;
-        background: url(../images/triangle_bg.png) repeat-x;
+        background: url(../~/images/triangle_bg.png) repeat-x;
         background-size: 26px 10px;
 }
 .pos-top{ position: absolute; top: 0; left: 0; right: 0;  }
@@ -467,7 +467,7 @@ section {
 
 /*ICONS*/
 
-.icon-gradient{ display: block; height: 80px; width: 80px;  background: url(../images/icons.png) no-repeat; background-size: cover; background-position: 0; }
+.icon-gradient{ display: block; height: 80px; width: 80px;  background: url(../~/images/icons.png) no-repeat; background-size: cover; background-position: 0; }
 
 .icon-gradient.icon-pizza{ background-position: 0 0; }
 .icon-gradient.icon-sea-food{ background-position: -239px 0; }
@@ -475,7 +475,7 @@ section {
 .icon-gradient.icon-salad{ background-position: -79px 0; }
 
 
-.icon-box{ display: block; height: 50px; width: 50px;  background: url(../images/icon-boxes.png) no-repeat; background-size: cover; background-position: 0; }
+.icon-box{ display: block; height: 50px; width: 50px;  background: url(../~/images/icon-boxes.png) no-repeat; background-size: cover; background-position: 0; }
 
 .icon-box.icon-pizza{ background-position: 0 0; }
 .icon-box.icon-ingradient{ background-position: -49px 0; }
@@ -767,7 +767,7 @@ section {
 
 /* BACKGROUND COLOR*/
 
-.bg-seller{ background: url(../images/sellers-1-1600x1600.jpg)  no-repeat; background-size: cover; position: relative; z-index: 1; }
+.bg-seller{ background: url(../~/images/PreventivoMant.jpg)  no-repeat; background-size: cover; position: relative; z-index: 1; }
 
 .bg-seller:after{ content: ""; position: absolute; top: 0; left: 0; right: 0; bottom: 0; z-index: -1; background: rgba(0,0,0,.85); }
 
@@ -866,21 +866,21 @@ section {
 }
 
 
-.bg-1 { background: url(../images/slider_1_1920_1200.jpg) no-repeat center; background-size: cover; }
+.bg-1 { background: url(../~/images/PreventivoMant.jpg) no-repeat center; background-size: cover; }
 
-.bg-2 {   background: url(../images/story_bg_1.png) no-repeat center; background-size: 100%; }
+.bg-2 {   background: url(../~/images/mant.jpg) no-repeat center; background-size: 100%; }
 
-.bg-3 {  background: url(../images/story_bg_2.png) no-repeat center;  background-size: 100%; }
+.bg-3 {  background: url(../~/images/Mant2.jpg) no-repeat center;  background-size: 100%; }
 
-.bg-4 {  background: url(../images/slider_2_1920_600.jpg) no-repeat center;  background-size: cover; }
+.bg-4 {  background: url(../~/images/AceiteMotor.jpg) no-repeat center;  background-size: cover; }
 
-.bg-5 {  background: url(../images/slider_3_1920_600.jpg) no-repeat center;  background-size: cover; }
+.bg-5 {  background: url(../~/images/AceiteMotor.jpg) no-repeat center;  background-size: cover; }
 
-.bg-6 {  background: url(../images/slider_4_1920_600.jpg) no-repeat center;  background-size: cover; }
+.bg-6 {  background: url(../~/images/AceiteMotor.jpg) no-repeat center;  background-size: cover; }
 
-.bg-7 {  background: url(../images/slider_5_1920_600.jpg) no-repeat center;  background-size: cover; }
+.bg-7 {  background: url(../~/images/AceiteMotor.jpg) no-repeat center;  background-size: cover; }
 
-.bg-8 {  background: url(../images/slider_6_1920_600.jpg) no-repeat center;  background-size: cover; }
+.bg-8 {  background: url(../~/images/AceiteMotor.jpg) no-repeat center;  background-size: cover; }
 
 .bg-grad-layer-6:after { content: ''; position: absolute; top: 0; bottom: 0; left: 0; right: 0; z-index: -1; opacity: .6;
         background: linear-gradient(to top, #000 0%, rgba(0, 0, 0, .4) 100%); }
@@ -1498,9 +1498,9 @@ ul.selecton li a.active{ border-radius: 3px 3px 0 0; background: #EF0031; color:
 
 /*FOOTER*/
 
-footer{ background: url("../images/footer_1600x800.jpg") no-repeat; background-size: cover;  position: relative;  text-align: center;z-index: 1;  font-size: 1.3em; }
+footer{ background: url("../~/images/PreventivoMant.jpg") no-repeat; background-size: cover;  position: relative;  text-align: center;z-index: 1;  font-size: 1.3em; }
 
-.footer-bg-1{ background-image:  url("../images/footer-1.png") ; }
+.footer-bg-1{ background-image:  url("../~/images/AceiteMotor.jpg") ; }
 .footer-bg-1:after{ display: none; }
 
 footer,
